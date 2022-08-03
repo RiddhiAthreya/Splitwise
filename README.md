@@ -29,7 +29,7 @@ https://user-images.githubusercontent.com/54843776/182650348-ce5c2e39-4214-4bb4-
 ![WhatsApp Image 2022-08-03 at 8 11 41 PM](https://user-images.githubusercontent.com/54843776/182651401-f5ea74f9-110b-47d8-b68c-a1545d22099d.jpeg)
 
 ## How to run
-- Step 1 : Please make sure you have .net core 3.1 installed. You can get it from this location
+- Step 1 : Please make sure you have .net core 3.1 installed. You can get it from this location. Install both , SDK(SDK 3.1.421) as well as the ASP.NET core runtime(ASP.NET Core Runtime 3.1.27)
 
 https://dotnet.microsoft.com/en-us/download/dotnet/3.1
 
