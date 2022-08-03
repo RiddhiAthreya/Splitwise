@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "cef07743-db31-4e71-b007-d3199f9a141c",
+		"name": "Splitwise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"UserName\": \"Hrishi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/User/AddUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"User",
+						"AddUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddEqualExpense",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"PaidBy\": \"Riddhi\",\r\n  \"Amount\": 500,\r\n  \"paidTo\": [\"Hrishi\",\"Riddhi\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/Expense/AddExpense?expenseType=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Expense",
+						"AddExpense"
+					],
+					"query": [
+						{
+							"key": "expenseType",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddExactExpense",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"PaidBy\": \"Riddhi\",\r\n  \"Amount\": 500,\r\n  \"PaidTo\": [\"Hrishi\",\"Riddhi\"],\r\n  \"AmountSplit\": [250,250]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/Expense/AddExpense?expenseType=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Expense",
+						"AddExpense"
+					],
+					"query": [
+						{
+							"key": "expenseType",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPercentageExpense",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"PaidBy\": \"Hrishi\",\r\n  \"Amount\": 500,\r\n  \"paidTo\": [\"Riddhi\",\"Hrishi\"],\r\n  \"percentageSplit\": [50,50]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/Expense/AddExpense?expenseType=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Expense",
+						"AddExpense"
+					],
+					"query": [
+						{
+							"key": "expenseType",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowBalance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/Expense/ShowBalance?UserName=Hrishi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Expense",
+						"ShowBalance"
+					],
+					"query": [
+						{
+							"key": "UserName",
+							"value": "Hrishi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SettleBalance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/Expense/SettleBalance?UserName=Hrishi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Expense",
+						"SettleBalance"
+					],
+					"query": [
+						{
+							"key": "UserName",
+							"value": "Hrishi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/User/GetUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"User",
+						"GetUsers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
